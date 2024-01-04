@@ -62,7 +62,6 @@ class SecurityController extends AppController {
             return $this->render('register', ['messages' => ['Please provide proper password']]);
         }
 
-        //TODO try to use better hash function
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
         $user = new User($email, $hashedPassword, $name, $surname);
@@ -71,5 +70,14 @@ class SecurityController extends AppController {
         $this->userRepository->addUser($user);
 
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
+    }
+
+    public function logout()
+    {
+        session_start();
+        session_unset();
+        session_destroy();
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/login");
     }
 }

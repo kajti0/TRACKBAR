@@ -11,4 +11,5 @@ Routing::post('register', 'SecurityController');
 Routing::get('main_page', 'TaskController');
 Routing::get('all_tasks', 'DefaultController');
 Routing::post('addTask', 'TaskController');
+Routing::get('logout', 'SecurityController');
 Routing::run($path);

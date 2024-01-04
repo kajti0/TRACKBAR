@@ -11,10 +11,9 @@
 <div id="sidebar">
     <img src="public/img/logo.png" alt="Logo">
     <a href="addTask">Add Tasks</a>
-    <a href="main_page">Main Page</a>
     <a href="all_tasks">All Tasks</a>
     <a href="#">My Account</a>
-    <a href="login">Logout</a>
+    <a href="logout">Logout</a>
 </div>
 <main>
     <header>
