@@ -9,13 +9,22 @@
 <body>
     
 <div class="login-container">
-    <form class="login">
+    <form class="login" action="login" method="POST">
+        <div class="messages">
+            <?php
+            if(isset($messages)){
+                foreach($messages as $message) {
+                    echo $message;
+                }
+            }
+            ?>
+        </div>
         <img src="public/img/logo.png" alt="Logo">
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
-        <button>Login</button>
+        <input name="email" type="text" placeholder="email" required>
+        <input name="password" type="password" placeholder="password" required>
+        <button type="submit">Login</button>
         <div class="signup-link">
-            Don't have an account yet? <a href="signup.html">Sign up!</a>
+            Don't have an account yet? <a href="register">Sign up!</a>
         </div>
     </form>
 </div>

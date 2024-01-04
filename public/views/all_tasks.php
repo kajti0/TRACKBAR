@@ -31,13 +31,34 @@
 </head>
 <body>
   <div id="sidebar">
-    <img src="public/img/logo.png" alt="Logo">
-    <a href="#">Add Tasks</a>
-    <a href="#">All Tasks</a>
-    <a href="#">My Account</a>
-    <a href="#">Logout</a>
+      <img src="public/img/logo.png" alt="Logo">
+      <a href="addTask">Add Tasks</a>
+      <a href="main_page">Main Page</a>
+      <a href="all_tasks">All Tasks</a>
+      <a href="#">My Account</a>
+      <a href="login">Logout</a>
   </div>
   <div id='calendar'></div>
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+              initialView: 'dayGridMonth',
+              events: {
+                  url: '/src/controllers/getEvents.php',
+                  method: 'GET',
+                  extraParams: {
+                  },
+                  failure: function() {
+                      alert('Wystąpił problem podczas pobierania danych.');
+                  },
+              },
+          });
+
+          calendar.render();
+      });
+  </script>
 </body>
 </html>
 

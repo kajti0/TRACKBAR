@@ -1,0 +1,66 @@
+body {
+    font-family: 'Argentum Novus', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar {
+    width: 20vw;
+    height: 100vh;
+    background-color: #1B4457;
+    padding-top: 20px;
+    color: #fff;
+}
+
+#sidebar img {
+    width: 80px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+#sidebar a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Argentum Novus', sans-serif;
+}
+
+main {
+    flex: 1; /* Nowa linia dodana, aby główna część strony zajmowała dostępne miejsce */
+    padding: 2em;
+}
+
+h2 {
+    text-align: center; /* Centrowanie nagłówka */
+}
+
+form {
+    max-width: 600px; /* Maksymalna szerokość formularza */
+    margin: 0 auto; /* Centrowanie formularza */
+}
+
+/* Styl dla pól formularza */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #1B4457;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}

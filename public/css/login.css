@@ -55,3 +55,22 @@ form.login {
     font-weight: bold;
 }
 
+@media only screen and (max-device-width: 600px) {
+    .login-container {
+        width: 80vw;
+        margin: 50px auto;
+    }
+
+    .login-container img {
+        width: 60vw;
+    }
+
+    .login-container input {
+        width: 90%;
+    }
+
+    .login-container button {
+        width: 70%;
+    }
+}
+

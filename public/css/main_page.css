@@ -2,7 +2,7 @@ body {
     font-family: 'Argentum Novus', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #b7b7b7;
     display: flex;
     flex-direction: row;
 }
@@ -31,8 +31,6 @@ body {
 }
 
 #content {
-    
-    
     height: 80vh;
     padding: 2em;
     display: flex;
@@ -40,7 +38,7 @@ body {
 }
 
 .tasks {
-    width: 42vw;
+    width: 40vw;
     height: 100%;
     background-color: #fff;
     border-radius: 10px;
@@ -48,15 +46,88 @@ body {
     margin-bottom: 20px;
     display: inline-block;
     margin-right: 20px;
+    overflow-y: auto;
+}
+
+#task {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #b69a9a;
+    margin: 10px;
+}
+
+#task h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#task p {
+    color: #666;
+}
+
+.interaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.interaction i {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .weather {
     width: 32vw;
-    height: 100%;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    display: inline-block;
-    margin-right: 20px;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    font-family: 'Argentum Novus', sans-serif;
+    font-size: larger;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.details {
+    width: 80%;
+}
+
+@media only screen and (max-device-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 100%;
+        height: fit-content;
+    }
+
+    #content {
+        padding: 1em;
+        height: 40vh;
+    }
+
+    .tasks {
+        width: 100vw;
+    }
+
+    #task {
+        margin: 10px 0;
+    }
+
+    .weather {
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }

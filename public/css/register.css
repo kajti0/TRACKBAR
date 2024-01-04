@@ -42,3 +42,23 @@ form.register {
     cursor: pointer;
 }
 
+.no-valid {
+    border: 3px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
+}
+
+@media only screen and (max-device-width: 600px) {
+    .register-container {
+        width: 80vw;
+    }
+
+    .register-container img {
+        width: 60vw;
+    }
+
+    .register-container button {
+        width: 80%;
+    }
+}
